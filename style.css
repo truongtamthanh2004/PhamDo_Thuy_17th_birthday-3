@@ -1,0 +1,104 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('image/2.jpg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    max-width: 90%;
+}
+
+.happy_birthday_to_thuy {
+    text-align: center;
+    font-family: cursive;
+    font-size: 40px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* border: 1px solid black; */
+    /* border-radius: 10px; */
+    z-index: 10;
+    background-image: url('https://dunghm98.github.io/img/puung3.jpg');
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-text {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    display: flex;
+    height: 50%;
+}
+
+.popup-text .tex {
+    font-family: cursive;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.popup-buttons {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.button--active {
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 3px;
+    border-color: #dc3545;
+}
+
+.button--false {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+#move {
+    position: relative;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
